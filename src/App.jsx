@@ -2,13 +2,10 @@ import React, { useState } from 'react';
 import ProductContainer from './components/ProductContainer';
 import AddProduct from './components/AddProduct';
 import './App.css';
+import Logo from  '../src/assets/logo.jpg';
 
 const App = () => {
   const [cart, setCart] = useState([]);
-
-  // const removeFromCart = (product) => {
-  //   setCart(cart.filter(item => item.productName !== product.productName));
-  // };
 
   const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
@@ -17,7 +14,7 @@ const App = () => {
 
       <nav>
         <ul>
-          <li><img src="./src/assets/logo.jpg" alt="Logo" /></li>
+          <li><img src={Logo} alt="Logo" /></li>
           <li>Home</li>
           <li>Category</li>
           <li>About Us</li>
