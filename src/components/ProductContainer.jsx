@@ -1,16 +1,26 @@
 import React from 'react';
+import CasualShoe from '../../src/assets/casualShoe.webp';
+import WaterShoe from '../../src/assets/waterShoe.webp';
+import SportShoe from '../../src/assets/sportShoe.jpg';
+import TinyKidShoe from '../../src/assets/tinyKidShoe.webp';
+import FormalShoe from '../../src/assets/formalShoe.webp';
+import NikeDunkShoe from '../../src/assets/nikeDunk.webp';
+import WhiteSneakerShoe from '../../src/assets/whiteSneaker.webp';
+import RunningShoe from '../../src/assets/runningShoe.avif';
+
 
 const ProductContainer = ({ cart, setCart }) => {
   const products = [
-    { productName: "Casual Shoe", price: 200.00, img: "./src/assets/casualShoe.webp" },
-    { productName: "Water Shoe", price: 999.00, img: "./src/assets/waterShoe.webp" },
-    { productName: "Sport Shoe", price: 2400.00, img: "./src/assets/sportShoe.jpg" },
-    { productName: "Tiny kid Shoe", price: 2400.00, img: "./src/assets/tinyKidShoe.webp" },
-    { productName: "Formal Shoe", price: 30.00, img: "./src/assets/formalShoe.webp" },
-    { productName: "Nike Dunk Shoe", price: 140.00, img: "./src/assets/nikeDunk.webp" },
-    { productName: "White Sneaker Shoe", price: 500.00, img: "./src/assets/whiteSneaker.webp" },
-    { productName: "Running Shoe", price: 4000.00, img: "./src/assets/runningShoe.avif" },
+    { productName: "Casual Shoe", price: 200.00, img: CasualShoe },
+    { productName: "Water Shoe", price: 999.00, img: WaterShoe },
+    { productName: "Sport Shoe", price: 2400.00, img:SportShoe },
+    { productName: "Tiny kid Shoe", price: 2400.00, img: TinyKidShoe },
+    { productName: "Formal Shoe", price: 30.00, img: FormalShoe },
+    { productName: "Nike Dunk Shoe", price: 140.00, img: NikeDunkShoe },
+    { productName: "White Sneaker Shoe", price: 500.00, img: WhiteSneakerShoe },
+    { productName: "Running Shoe", price: 4000.00, img: RunningShoe },
   ];
+
 
   const addCart = (product) => {
     const productIndex = cart.findIndex(item => item.productName === product.productName);
